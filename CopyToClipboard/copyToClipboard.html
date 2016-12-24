@@ -1,0 +1,22 @@
+<html>
+<head>
+</head>
+<script>
+/*
+ * Create hidden input with the desired value and copy content to clipboard.
+ */
+function copyToClipboard(value) {
+  var aux = document.createElement("input");
+  aux.setAttribute("value", value);
+  document.body.appendChild(aux);
+  aux.select();
+  document.execCommand("copy");
+  document.body.removeChild(aux);
+}
+</script>
+<body>
+
+<button onclick="copyToClipboard('p1')">Copy P1</button>
+
+</body>
+</html>
